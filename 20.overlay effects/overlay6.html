@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: chartreuse;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+            position: relative;
+            margin: auto;
+
+        }
+
+        img {
+            max-width: 100%;
+            height: 500px;
+            vertical-align: middle;
+        }
+
+        .main .black {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.636);
+            display: grid;
+            place-content: center;
+            height: 100%;
+            width: 100%;
+            transition: 0.4s ease-in-out;
+            color: white;
+            font-size: 18px;
+            overflow: hidden;
+            transform: scale(0);
+        }
+        .text{
+            transform: scale(0);
+            transition: 0.4s ease-in-out;
+        }
+
+        .main:hover .black {
+            transform: scale(100%);
+        }
+
+        .main:hover .text {
+            transition-delay: 1s;
+            transform: scale(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="image">
+            <img src="https://media.istockphoto.com/id/519330110/photo/taj-mahal-agra-india-monument-of-love-in-blue-sky.jpg?s=612x612&w=0&k=20&c=Uma6Q7KduznA6jUKcSquFP1iHHiw8UXcZEYVLONrmaQ=" alt="">
+        </div>
+        <div class="black">
+            <div class="text">
+                <h1>Image Overlay</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            /* background-color: transparent; */
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid black; */
+            perspective: 1000px;
+            margin: auto;
+        }
+
+        .flipbox {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+        }
+
+        .main:hover .flipbox {
+            transform: rotateY(180deg);
+        }
+
+        .front {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .back {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            background-color: crimson;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="flipbox">
+            <div class="front">
+                <img src="https://media.istockphoto.com/id/519330110/photo/taj-mahal-agra-india-monument-of-love-in-blue-sky.jpg?s=612x612&w=0&k=20&c=Uma6Q7KduznA6jUKcSquFP1iHHiw8UXcZEYVLONrmaQ=" alt="">
+            </div>
+            <div class="back">
+                <h1>Flip Image</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum laborum blanditiis voluptates aperiam
+                    quod voluptatem voluptate? Minima, deleniti dolore, blanditiis, voluptatibus cupiditate quae
+                    possimus perspiciatis tempore recusandae inventore in expedita?</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            background-color: purple;
+            color: white;
+            display: flex;
+            gap: 10px;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            font-size: 30px;
+            margin-left: 20px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            flex: 1;
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            padding: 15px;
+            margin-right: 20px;
+        }
+
+        i,
+        span {
+            padding: 5px;
+        }
+
+        span {
+            transition: 0.5s ease;
+        }
+
+        .dropdown:hover span {
+            transform: rotateX(180deg);
+        }
+
+        .droplist {
+            display: none;
+            position: relative;
+            transition: 0.5s ease-in-out;
+
+        }
+
+        .dropdown:hover .droplist {
+            background-color: white;
+            display: block;
+            position: absolute;
+            top: 60px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 0px 4px 4px black;
+        }
+
+        .item {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo"><i class="fa-solid fa-house"></i>Logo</div>
+            <div class="menuitems">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li class="dropdown"><a href="#">Services<span class="fa-solid fa-chevron-down"></span></a>
+                        <ul class="droplist">
+                            <li><a href="#" class="item">Service 1</a></li>
+                            <li><a href="#" class="item">Service 2</a></li>
+                            <li><a href="#" class="item">Service 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
